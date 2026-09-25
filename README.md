@@ -1,15 +1,14 @@
-# Replace with your unique project name
+# Color Helper
 
 ## Description
 
 **version 1.0**
 
-Replace with a description of *what* your program does (not *how* it works)
-
+Helps determine between colors for those with color-blindness
 
 ## Developer
 
-Replace with your name
+Cai Mcdonnell
 
 ## Example
 
