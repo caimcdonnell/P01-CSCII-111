@@ -1,12 +1,12 @@
 #include <iostream>
 #include <string>
-#include <algorithm>
 using namespace std;
 
 string CheckColor(int red, int green, int blue);
 bool CheckWhite();
 bool CheckBlack();
 int ClampInt(int base, int min, int max);
+void AskInput();
 
 struct RGB
 {
@@ -18,13 +18,7 @@ RGB clr;
 
 int main()
 {
-	cout << "Please input your color code in RGB!\n";
-	cin >>  clr.RED >> clr.GREEN >> clr.BLUE; 
-	clr.RED = ClampInt(clr.RED, 0, 255);
-	clr.GREEN = ClampInt(clr.GREEN, 0, 255);
-	clr.BLUE = ClampInt(clr.BLUE, 0, 255);
-	cout << "RED: " << clr.RED << " GREEN: " << clr.GREEN << " BLUE: " << clr.BLUE << endl;
-	cout << "Your Color is " << CheckColor(clr.RED, clr.GREEN, clr.BLUE) << "!\n";
+	AskInput();
 	return 0;
 }
 
@@ -103,4 +97,16 @@ int ClampInt(int base, int min, int max)
 	{
 		return base;
 	}
+}
+
+void AskInput()
+{
+	cout << "Please input your color code in RGB!\n";
+	cin >> clr.RED >> clr.GREEN >> clr.BLUE;
+	clr.RED = ClampInt(clr.RED, 0, 255);
+	clr.GREEN = ClampInt(clr.GREEN, 0, 255);
+	clr.BLUE = ClampInt(clr.BLUE, 0, 255);
+	cout << "RED: " << clr.RED << " GREEN: " << clr.GREEN << " BLUE: " << clr.BLUE << endl;
+	cout << "Your Color is " << CheckColor(clr.RED, clr.GREEN, clr.BLUE) << "!\n";
+	AskInput();
 }
