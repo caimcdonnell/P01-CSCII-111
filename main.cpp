@@ -16,6 +16,14 @@ RGB clr;
 
 int main()
 {
+	cout << "Please input your color code in RGB!\n";
+	cin >> clr.RED >> clr.GREEN >> clr.BLUE;
+	cout << "RED: " << clr.RED << " GREEN: " << clr.GREEN << " BLUE: " << clr.BLUE;
+	return 0;
+}
+
+string CheckColor(int red, int green, int blue)
+{
 	if ((red - green) > 50 && (red - green) > 50 && !CheckBlack() && !CheckWhite() )
 	{
 		return "shutup";
